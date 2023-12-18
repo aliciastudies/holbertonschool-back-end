@@ -11,7 +11,6 @@ if __name__ == "__main__":
     user = requests.get(url + "/users/{}".format(employee_id)).json()
     todos = requests.get(url + "/users/" + employee_id + "/todos").json()
 
-
     EMPLOYEE_NAME = user.get("name")
 
     TOTAL_NUMBER_OF_TASKS = len(todos)
